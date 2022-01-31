@@ -190,7 +190,7 @@ msroot\@microsoft.com to have the EKU status set to "NotBefore."
 | Client Authentication (without Server Authentication) | X |  |  |  |  |
 | Document Signing | X |  |  |  |  |
 
-[^*]: Timestamp Authority Subordinate CA certificates and Timestamp Authority end-entity certificates that do not contain `anyPolicy` (2.5.29.32.0) or the CA/Browser Forum reserved policy OID for Timestamp Authorities for Code Signing (`2.23.140.1.4.2`) in the Certificate Policies extension are not subject to the audit requirements for Publicly Trusted Code Signing Certificates v1.0.1 or later.
+[^*]: Timestamp Authority Subordinate CA certificates and Timestamp Authority end-entity certificates that do not contain `anyPolicy` (OID: `2.5.29.32.0`) or the CA/Browser Forum reserved policy OID for Timestamp Authorities for Code Signing (OID: `2.23.140.1.4.2`) in the Certificate Policies extension are not subject to the audit requirements for Publicly Trusted Code Signing Certificates v1.0.1 or later.
 
 ### B. ETSI-Based Audits
 
