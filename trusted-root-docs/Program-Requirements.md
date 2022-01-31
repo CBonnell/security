@@ -72,13 +72,14 @@ Program.
 7.  Government CAs must restrict server authentication to government-issued top level domains and may only issue other certificates to the ISO3166 country codes that the country has sovereign control over (see  <https://aka.ms/auditreqs> section III for the definition of a "Government CA"). These government-issued TLDs are referred to in each CA's respective contract. 
 8. Issuing CA certificates that chain to a participating Root CA must separate Server Authentication, S/MIME, Code Signing, and Time Stamping uses. This means that a single Issuing CA must not combine server authentication with S/MIME, code signing or time stamping EKU. A separate intermediate must be used for each use case. 
 9. End-entity certificates must meet the requirements for algorithm type and key size for Subscriber certificates listed in Appendix A of the CAB Forum Baseline Requirements located at   https://cabforum.org/baseline-requirements-documents/.
-10. CAs must declare one of the following policy OIDs in its Certificate Policy extension end-entity certificate: 
+10. CAs must declare one of the following policy OIDs in the Certificate Policy extension of end-entity certificates:
     1. DV 2.23.140.1.2.1 
     2. OV 2.23.140.1.2.2
-    3. EV 2.23.140.1.1. 
+    3. EV 2.23.140.1.1
     4. IV 2.23.140.1.2.3 
     5. EV Code Signing 2.23.140.1.3
     6. Non-EV Code Signing 2.23.140.1.4.1
+    7. Timestamp Authority for Code Signing 2.23.140.1.4.2 (effective for certificates with a `notBefore` value of 2022-04-01 or later)
 11. End-entity certificates that include a Basic Constraints extension in accordance with IETF RFC 5280 must have the cA field set to FALSE and the pathLenConstraint field must be absent.
 12. A CA must technically constrain an OCSP responder such that the only EKU allowed is OCSP Signing.
 13. A CA must be able to revoke a certificate to a specific date as requested by Microsoft.
